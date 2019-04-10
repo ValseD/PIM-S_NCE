@@ -1,4 +1,4 @@
-# S'NCE Base PIM
+# PIM-S'NCE
 
 This is a PHP development exercise which purpose is to implement a basic PIM system, required to accomplish the tech interview for S'NCE candidates.
 
