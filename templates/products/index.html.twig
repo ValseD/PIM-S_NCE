@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}PIM List{% endblock %}
+{% block body %} 
+
+    {% if products %}
+      <table id="products" class="table table-striped">
+      <thead>
+        <tr>
+          <th>preview</th>
+          <th>Product Name</th>
+          <th>Description</th>
+          <th>TAGS</th>
+          <th>Created On</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for product in products %}
+          <tr>
+            <td> <a href="/product/{{ product.id }}/edit" class="thumbnail">
+                    <img height="50" src="https://partylandia.it/10016-thickbox_default/cialda-ostia-cacca-scherzi-torta-compleanno-festa-emoji-marrone.jpg"/>
+                 </a>
+            </td>
+            <td>{{ product.Name }}</td>
+            <td>{{ product.Description }}</td>
+            <td>{{ product.Tags }}</td>
+            <td>{{ product.CreationDate|date('Y-m-d H:i:s') }}</td>
+            <td>
+              <a href="/product/{{ product.id }}/edit" class="btn btn-primary">Edit</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% else  %}
+        <p>no products to display</p>
+    {% endif %}
+
+{% endblock %}
+
