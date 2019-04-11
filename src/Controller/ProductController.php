@@ -163,10 +163,10 @@
                 'required' => true,
                 'attr' => array('class' => 'input-group date')
               ))        
-//          ->add('save', SubmitType::class, array(
-//              'label' => 'Update',
-//              'attr' => array('class' => 'btn btn-primary mt-3')
-//            ))
+          ->add('save', SubmitType::class, array(
+              'label' => 'Update',
+              'attr' => array('class' => 'btn btn-primary mt-3')
+            ))
             ->getForm();
 
 
