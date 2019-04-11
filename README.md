@@ -30,10 +30,10 @@ A step by step series of examples that tell you how to get a development env run
     > </VirtualHost>
     
 - Browse the project folder using the terminal
-- Run command: composer install to install dependencies
-- Run command: php bin/console doctrine:database:create
-- Run command: php bin/console doctrine:migrations:migrate
-- Open your browser and digit: localhost:80  
+- Run command: **composer install** to install dependencies
+- Run command: **php bin/console doctrine:database:create**
+- Run command: **php bin/console doctrine:migrations:migrate**
+- Open your browser and digit: **localhost:80**  
 
 ===========
 
