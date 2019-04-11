@@ -15,16 +15,23 @@ This version has been developed on XAMPP.
 
 A step by step series of examples that tell you how to get a development env running
 
-*Install the last version of Symfony following the steps described in the official website
-*Install the last version of Composer as described in the official website 
-Start your Apache/MySQL/PHP platform to activate the local instance 
-Clone this project into a folder under ..\htdocs  
-Change the file "app/config/parameters.yml" with all the reference of your mySQL instance
-Browse the project folder using the terminal
-Run command: composer install to install dependencies*
-Run command: php bin/console doctrine:database:create
-Run command: php bin/console doctrine:schema:update --force
-Open your browser and digit: localhost:80  
+- Install the last version of Symfony following the steps described in the official website
+- Install the last version of Composer as described in the official website 
+- Start your Apache/MySQL/PHP platform to activate the local instance 
+- Clone this project into a folder under ..\htdocs  
+- Change the file "app/config/parameters.yml" with all the reference of your mySQL instance
+- Open the Apache <virtual host> file and add the node related to the local folder where the project has been cloned on the localhost:80 port as the example below:
+    <VirtualHost *:80>
+        # This first-listed virtual host is also the default for *:80
+        ServerName www.example.com
+        ServerAlias example.com 
+        DocumentRoot "/www/domain"
+    </VirtualHost>
+- Browse the project folder using the terminal
+- Run command: composer install to install dependencies*
+- Run command: php bin/console doctrine:database:create
+- Run command: php bin/console doctrine:schema:update --force
+- Open your browser and digit: localhost:80  
 
 ===========
 
@@ -73,4 +80,4 @@ Come amministratore del sito cliccando sul link di una riga della lista o sull'i
 
 ### Modalità di rilascio:
 =====================
-Il progetto deve essere rilasciato su repository pubblico github
+- Il progetto deve essere rilasciato su repository pubblico github
