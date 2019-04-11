@@ -174,10 +174,10 @@
             $form->handleRequest($request);
             if($form->isSubmitted() && $form->isValid()) {
 
-              $file = $product->getImgURL(); 
-              $fileName = md5(uniqid()).'.'.$file->guessExtension(); 
-              $file->move($this->getParameter('product_image'), $fileName); 
-              $product->setImgURL($fileName); 
+            //  $file = $product->getImgURL(); 
+            //  $fileName = md5(uniqid()).'.'.$file->guessExtension(); 
+            //  $file->move($this->getParameter('product_image'), $fileName); 
+            //  $product->setImgURL($fileName); 
                   
             //$product = $form->getData();
               $entityManager = $this->getDoctrine()->getManager();
