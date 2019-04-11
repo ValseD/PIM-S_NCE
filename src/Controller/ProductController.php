@@ -32,6 +32,17 @@
         //    return $this->render('products/index.html.twig', array('products'=> $products));
         }
 
+        
+        /**
+         * @Route("/product", name="get_product_img")
+         * Method({"GET"})
+        */
+        public function img() {
+
+          // return $this->render('products/'); 
+          return $this->redirectToRoute('get_product_img'); 
+     }
+
         /**
          * @Route("/product/list", name="product_list")
          * @Method({"GET"})
@@ -152,17 +163,13 @@
                 'required' => true,
                 'attr' => array('class' => 'input-group date')
               ))        
-
-            ->add('imgURL', FileType::class, array(
-              'label' => 'Image (png, jpeg)',
-              'attr' => array('class'=> 'form-control-file')
-            )) 
-            
-            ->add('save', SubmitType::class, array(
-              'label' => 'Create',
-              'attr' => array('class' => 'btn btn-primary mt-3')
-            ))
+//          ->add('save', SubmitType::class, array(
+//              'label' => 'Update',
+//              'attr' => array('class' => 'btn btn-primary mt-3')
+//            ))
             ->getForm();
+
+
 
             $form->handleRequest($request);
             if($form->isSubmitted() && $form->isValid()) {

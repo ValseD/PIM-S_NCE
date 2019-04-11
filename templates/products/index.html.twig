@@ -19,7 +19,7 @@
         {% for product in products %}
           <tr>
             <td> <a href="/product/{{ product.id }}/edit" class="thumbnail">
-                    <img height="50" src="https://partylandia.it/10016-thickbox_default/cialda-ostia-cacca-scherzi-torta-compleanno-festa-emoji-marrone.jpg"/>
+                    <img height="50" src="/product/{{ product.imgURL }}"/>
                  </a>
             </td>
             <td>{{ product.Name }}</td>
