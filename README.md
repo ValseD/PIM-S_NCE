@@ -15,8 +15,8 @@ This version has been developed on XAMPP.
 
 A step by step series of examples that tell you how to get a development env running
 
-Install the last version of Symfony following the steps described in the official website
-Install the last version of Composer as described in the official website 
+*Install the last version of Symfony following the steps described in the official website
+*Install the last version of Composer as described in the official website 
 Start your Apache/MySQL/PHP platform to activate the local instance 
 Clone this project into a folder under ..\htdocs  
 Change the file "app/config/parameters.yml" with all the reference of your mySQL instance
