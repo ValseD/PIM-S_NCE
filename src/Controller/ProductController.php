@@ -16,6 +16,7 @@
     use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
     use Symfony\Component\Form\Extension\Core\Type\FileType;
 
+
     class ProductController extends Controller {
         /**
          *  @Route("/", name="product_root")
