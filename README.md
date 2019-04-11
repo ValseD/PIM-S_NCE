@@ -21,16 +21,18 @@ A step by step series of examples that tell you how to get a development env run
 - Clone this project into a folder under ..\htdocs  
 - Change the file "app/config/parameters.yml" with all the reference of your mySQL instance
 - Open the Apache <virtual host> file and add the node related to the local folder where the project has been cloned on the localhost:80 port as the example below:
+    
     > <VirtualHost *:80>
        >  This first-listed virtual host is also the default for *:80
        >  ServerName www.example.com
        >  ServerAlias example.com 
        >  DocumentRoot "/www/domain"
     > </VirtualHost>
+    
 - Browse the project folder using the terminal
-- Run command: composer install to install dependencies*
+- Run command: composer install to install dependencies
 - Run command: php bin/console doctrine:database:create
-- Run command: php bin/console doctrine:schema:update --force
+- Run command: php bin/console doctrine:migrations:migrate
 - Open your browser and digit: localhost:80  
 
 ===========
