@@ -155,7 +155,6 @@
             ))
             ->add('TAGS', TextareaType::class, array(
                 'required' => true,
-                'data' => 'STANDARD',
                 'attr' => array('class' => 'form-control')
             ))
             ->add('CreationDate', DateTimeType::class, array(
